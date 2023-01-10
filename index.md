@@ -1,8 +1,8 @@
 ---
-title: Welcome to my website
+title: Andy website
 feature_image: "https://picsum.photos/1300/400?image=989"
 feature_text: |
-  ## Hello world
+  ## Andy's website
 ---
 
-There isn't much going on here yet, but watch this space
+프론트엔드 개발자 앤디의 웹사이트입니다.

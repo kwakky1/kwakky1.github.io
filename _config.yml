@@ -23,7 +23,7 @@ plugins:
 # Site settings
 encoding: UTF-8
 lang: ko # Set the site language
-logo: "/assets/logos/logo.svg"
+logo: "/assets/logos/favicon-32x32.png"
 repo: "https://github.com/kwakky1/kwakky1.github.io"
 url: 'https://kwakky1.github.io'
 baseurl: ''
@@ -32,6 +32,12 @@ description: "This is Andy's website"
 permalink: pretty
 email: "kwakky1@gmail.com"
 disqus: "kwakky1"
+
+favicons: # Favicons are also used in the manifest file. Syntax is 'size: path'
+  16: '/assets/logos/favicon-16x16.png'
+  32: '/assets/logos/favicon-32x32.png'
+  180: '/assets/logos/apple-touch-icon.png'
+  512: '/assets/logos/android-chrome-512x512.png'
 
 # Pagination
 paginate: 5

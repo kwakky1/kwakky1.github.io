@@ -15,18 +15,17 @@ feature_image: "https://picsum.photos/2560/600?image=874"
 ***
 
 > A lightweight comments widget built on GitHub issues. Use GitHub issues for blog comments, wiki pages and more! <br>
-> * Open source. 🙌 
-> * No tracking, no ads, always free. 📡🚫  
-> * No lock-in. All data stored in GitHub issues. 🔓  
-> * Styled with Primer, the css toolkit that powers GitHub. 💅  
-> * Dark theme. 🌘 
-> * Lightweight. Vanilla TypeScript. No font downloads, JavaScript frameworks or polyfills for evergreen browsers. 🐦🌲
-
-한번 번역을 해서 보는것보다 원문을 보는게 훨씬 더 잘 이해가 된다고 생각해서 utterances에 대한 원문 설명을 가지고 왔다.
+> - Open source. 🙌 
+> - No tracking, no ads, always free. 📡🚫  
+> - No lock-in. All data stored in GitHub issues. 🔓  
+> - Styled with Primer, the css toolkit that powers GitHub. 💅  
+> - Dark theme. 🌘 
+> - Lightweight. Vanilla TypeScript. No font downloads, JavaScript frameworks or polyfills for evergreen browsers. 🐦🌲
 
 ***
 
-<br>
+한번 번역을 해서 보는것보다 원문을 보는게 훨씬 더 잘 이해가 된다고 생각해서 utterances에 대한 원문 설명을 가지고 왔다.
+
 - 오픈소스, 공짜, 테마가 다양, 관리가 용이하다는 장점이 있었다.  
 
 # utterances 적용

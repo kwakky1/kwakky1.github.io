@@ -9,3 +9,21 @@ styles: true
   padding-bottom: 1rem!important;
   padding-top: 1rem!important;
 }
+
+.typeset blockquote {
+  padding: 1rem 1rem 1rem 2rem!important;
+}
+
+ul {
+  padding-left: 1rem!important;
+}
+
+.typeset blockquote p {
+  margin-bottom: 0;
+}
+
+.typeset blockquote ul {
+  padding-left: 2rem!important;
+  border-left: 0.15rem solid #05bf85;
+  font-style: italic;
+}

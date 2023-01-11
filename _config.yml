@@ -27,11 +27,10 @@ logo: "/assets/logos/favicon-32x32.png"
 repo: "https://github.com/kwakky1/kwakky1.github.io"
 url: 'https://kwakky1.github.io'
 baseurl: ''
-title: "Andy's website"
-description: "This is Andy's website"
+title: "Andy's blog"
+description: "This is Andy's blog"
 permalink: pretty
 email: "kwakky1@gmail.com"
-disqus: "kwakky1"
 
 favicons: # Favicons are also used in the manifest file. Syntax is 'size: path'
   16: '/assets/logos/favicon-16x16.png'

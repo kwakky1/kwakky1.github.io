@@ -19,6 +19,7 @@ plugins:
 - jekyll-include-cache
 - jemoji
 - jekyll-remote-theme
+- jekyll-toc
 
 # Site settings
 encoding: UTF-8
@@ -50,6 +51,8 @@ navigation_header:
   url: /about/
 - title: Blog
   url: /blog/
+- title: Search
+  url: /search/
 
 # Footer nav
 navigation_footer:
@@ -76,6 +79,7 @@ defaults:
       type: "posts"
     values:
       layout: post # Set the default layout for posts
+      toc: true
   -
     scope:
       path: ""

@@ -9,7 +9,7 @@ feature_text: |
   <img src="https://media.giphy.com/media/SWoSkN6DxTszqIKEqv/giphy.gif" alt="Coder GIF" width="500">
 </p>
 
-## 안녕하세요! 앤디의 블로그입니다. <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px" height="30px" />
+## 안녕하세요! 앤디의 기술 블로그입니다. <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px" height="30px" />
 
 - 💻 프론트엔드 개발자 
 - 👓 브리즘 개발자
@@ -28,9 +28,8 @@ feature_text: |
 ![Git](https://img.shields.io/badge/-Git-F05032?style=plastic&logo=git&logoColor=ffffff)
 ![Docker](https://img.shields.io/badge/-Docker-46a2f1?style=plastic&logo=docker&logoColor=ffffff)
 
-<br/>
-
 ![Github](https://img.shields.io/badge/-Github-222222?style=for-the-badge&logo=github&logoColor=ffffff)
+---
 <a href="https://github.com/kwakky1/kwakky1">
   <img align="center" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=kwakky1&hide=java,html,tex&title_color=ffffff&text_color=c9cacc&icon_color=2bbc8a&bg_color=1d1f21&langs_count=3" />
 </a>

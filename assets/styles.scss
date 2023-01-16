@@ -36,7 +36,8 @@ ul {
   list-style: none;
 }
 
-.aside .section {
+.aside {
+  opacity: 1;
   @media (max-width: 640px) {
     display: none;
   }

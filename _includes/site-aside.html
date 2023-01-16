@@ -1,0 +1,9 @@
+<aside class="aside  typeset  aside--{{ include.align | default: 'right' }}">
+
+    {% if page.layout == "post" %}
+    <section class="section">
+        {% toc %}
+    </section>
+    {% endif %}
+
+</aside>

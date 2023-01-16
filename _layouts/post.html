@@ -17,9 +17,7 @@ toc: true
         {% include post-comments.html %}
 
     </article>
-    <aside class="aside-toc">
-        {% toc %}
-    </aside>
+    {% if page.aside == true %}{% include site-aside.html %}{% endif %}
 </main>
 
 {% include site-footer.html %}

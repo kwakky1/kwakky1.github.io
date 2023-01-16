@@ -32,25 +32,6 @@ ul {
   line-height: 1.5rem;
 }
 
-.main {
-  @include flex-direction(column-reverse!important);
-  @include breakpoint(break-1) {
-    @include flex-direction(row!important);
-  }
-}
-
-.aside-toc {
-  @include breakpoint(break-1) {
-    position: relative;
-  }
-}
-
-#toc {
-  padding-top: 20px!important;
-  padding-bottom: 20px!important;
-  @include breakpoint(break-1) {
-    position: absolute;
-    margin-left: 30px!important;
-    width: 50rem;
-  }
+.toc-entry {
+  list-style: none;
 }

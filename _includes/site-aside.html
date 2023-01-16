@@ -2,7 +2,7 @@
 
     {% if page.layout == "post" %}
     <section class="section">
-        {% toc %}
+        {{ content | toc_only }}
     </section>
     {% endif %}
 

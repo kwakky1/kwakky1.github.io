@@ -35,3 +35,11 @@ ul {
 .toc-entry {
   list-style: none;
 }
+
+.aside .section {
+  @media (max-width: 640px) {
+    display: none;
+  }
+}
+
+/*a hover color #008000*/

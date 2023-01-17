@@ -60,6 +60,10 @@ navigation_footer:
 - title: Back to top
   url: "#top"
 
+social_links:
+  GitHub: https://github.com/kwakky1
+  Email: kwakky1@gmail.com
+
 # Collections
 collections:
   posts:

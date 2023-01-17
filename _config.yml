@@ -32,6 +32,7 @@ title: "Andy's blog"
 description: "This is Andy's blog"
 permalink: pretty
 email: "kwakky1@gmail.com"
+google_analytics: "G-VNW35SJF7Z"
 
 favicons: # Favicons are also used in the manifest file. Syntax is 'size: path'
   16: '/assets/logos/favicon-16x16.png'

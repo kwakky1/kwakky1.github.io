@@ -52,13 +52,10 @@ feature_image: "https://picsum.photos/2560/600?image=881"
 <img width="467" alt="image" src="https://user-images.githubusercontent.com/62980973/213609639-ba855e01-6369-490e-981d-1612867897ad.png">
 
 내 커밋 기록을 통해 아침형인지 올빼미형인지 알려주는 플러그인이다. https://github.com/kwakky1/productive-box 내가 받은 productive-box 인데 이걸 그대로 fork 해서 사용해도된다.
-일단은 깃허브
 
 <img width="850" alt="image" src="https://user-images.githubusercontent.com/62980973/213610235-81d358bb-cc67-40c5-9558-3cafe08777fb.png">
 
 여기 있는 readMe를 읽고 진행하는 것이 좋다. 나도 플러그인을 만든게 있는데 리드미를 잘 작성해놓는것이 좋겠다는 생각이 들었다.
-
--
 
 ![2B946A91-2045-4C9C-86F3-1FB6770968E2_1_201_a](https://user-images.githubusercontent.com/62980973/213610870-17285f5e-0f53-450e-bfcd-5ec0049acb76.jpeg)
 

@@ -52,6 +52,8 @@ navigation_header:
   url: /about/
 - title: Blog
   url: /blog/
+- title: Categories
+  url: /categories/
 - title: Search
   url: /search/
 
@@ -86,6 +88,12 @@ defaults:
       layout: post # Set the default layout for posts
       aside: true
       toc: true
+  - scope:
+      path: ""
+      type: "category"
+    values:
+      layout: categories # Set the default layout for posts
+      aside: true
   -
     scope:
       path: ""

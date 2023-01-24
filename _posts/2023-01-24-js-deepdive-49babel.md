@@ -153,4 +153,4 @@ dist/js/bundle.js를 확인해 보면 폴리필이 추가된 것을 확인할 �
 ---
 ## 바벨 & 웹팩 테스트 깃허브 주소
 
-<a href="https://github.com/kwakky1/babel-test">https://github.com/kwakky1/babel-test</a>
+<a href="https://github.com/kwakky1/babel-webpack-test">https://github.com/kwakky1/babel-webpack-test</a>

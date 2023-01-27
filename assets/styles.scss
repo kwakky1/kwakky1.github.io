@@ -3,6 +3,32 @@ title: false
 styles: true
 ---
 
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:400,700');
+
+// Typography
+$bodytype: (
+        font-family: "'Plus Jakarta Sans', sans-serif",
+        regular: 400,
+        bold: 700,
+        cap-height: 0.75
+)!default;
+
+$headingtype: (
+        font-family: '"Merriweather", serif',
+        regular: 400,
+        bold: 700,
+        cap-height: 0.75
+)!default;
+
+$monospacetype: (
+        font-family: 'Menlo, monospace',
+        regular: 400,
+        cap-height: 0.68
+)!default;
+
+
+
 @import "alembic";
 
 .typeset hr {
@@ -98,11 +124,21 @@ tr:last-child td:last-child {
   border-bottom-right-radius: 6px;
 }
 
-/*.label--category > a {
-  padding: 0.3rem 1rem!important;
-  border-radius: 1rem;
-  margin-right: 0.5rem!important;
-  border: 1px solid #05BF85!important;
+.typeset p a, .typeset li a {
   background-image: none!important;
-}*/
+}
+
+.post-meta a {
+  margin-bottom: 0.875rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  height: 2rem;
+  border-radius: 1rem;
+  display: inline-flex;
+  -webkit-box-align: center;
+  align-items: center;
+  margin-right: 0.875rem;
+  text-decoration: none;
+  border: 1px solid;
+}
 

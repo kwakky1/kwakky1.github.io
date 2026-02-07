@@ -3,9 +3,8 @@ title: "Next.js를 Docker에서 실행하면 API 호출이 실패하는 진짜 �
 date: 2026-02-07
 categories: [Next.js, Docker, Troubleshooting]
 tags: [nextjs, docker, api, axios, next-auth, baseurl]
+feature_image: "https://picsum.photos/2560/600?image=891"
 ---
-
-# Next.js를 Docker에서 실행하면 API 호출이 실패하는 진짜 이유
 
 Next.js 프로젝트를 Docker 환경에서 실행할 때  
 **API 호출이 정상적으로 동작하지 않는 문제**를 겪는 경우가 많다.

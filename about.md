@@ -1,5 +1,31 @@
 ---
-title: About
+layout: page
+title: About Me
+permalink: /about/
 ---
 
-I'm not sure yet what this website is about, but I'm sure I'll work it out soon.
+## 👋 안녕하세요, 프론트엔드 개발자 Andy입니다.
+
+저는 눈에 보이는 화면 너머, 효율적인 **아키텍처**와 **데이터 흐름**을 고민하는 개발자입니다.  
+현재 **브리즘(Breezm)**에서 더 나은 사용자 경험을 위해 프론트엔드 시스템을 구축하고 있습니다.
+
+---
+
+### 🧠 Interests & Focus
+* **Architecture:** 복잡한 상태 관리를 단순화하고, 서버와 클라이언트의 책임을 명확히 분리하는 구조에 관심이 많습니다. (최근 Next.js + NestJS 세션 인증 구조 개선 진행)
+* **Optimization:** 렌더링 성능 최적화와 사용자 인터랙션의 부드러움을 추구합니다.
+* **Developer Experience:** 동료들이 읽기 쉬운 코드, 유지보수가 용이한 시스템을 만드는 것에 가치를 둡니다.
+
+### ✍️ Why this Blog?
+기술은 빠르게 변하지만, 문제를 해결하는 **논리적 사고**는 변하지 않는다고 믿습니다.  
+이 블로그는 제가 마주한 기술적 난관들을 어떻게 분석하고 해결했는지, 그 과정에서의 **'Why'**를 기록하는 공간입니다.
+
+단순한 코드 복사보다는 **의사결정의 이유**가 담긴 포스팅을 지향합니다.
+
+### 🔗 More About Me
+* [GitHub](https://github.com/kwakky1)
+* [Contact](mailto:kwakky1@gmail.com)
+
+---
+
+> "성장은 기록될 때 비로소 내 것이 된다."는 마음으로 오늘도 한 줄의 코드를 기록합니다.

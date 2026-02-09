@@ -1,6 +1,6 @@
 ---
 title: NextAuth 없이 NestJS 세션 인증 구현하기 | 성능과 UX 최적화 삽질기
-date: 2022-02-09
+date: 2026-02-09
 categories: [Frontend, Architecture]
 tags: [Next.js, NestJS, Session, SSR, ReactQuery]
 feature_image: "https://picsum.photos/2560/600?image=893"

@@ -3,7 +3,7 @@ title: Apple 로그인 구현 중 EB 환경변수 개행 문제와 테스트 서
 date: 2026-02-11
 categories: [Auth, Next.js, AWS]
 tags: [Apple Login, NextAuth, JWT, Elastic Beanstalk, Cookie, Troubleshooting]
-feature_image: "https://picsum.photos/2560/600?image=9895"
+feature_image: "https://picsum.photos/2560/600?image=895"
 ---
 
 Next.js + NextAuth 환경에서 **Apple 로그인**을 구현하던 중

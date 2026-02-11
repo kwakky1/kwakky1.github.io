@@ -91,7 +91,7 @@ base64 AuthKey_XXXX.p8
 
 ## 런타임에서 복원 후 clientSecret 생성
 
-```ts
+```typescript
 import { SignJWT } from "jose";
 import { createPrivateKey } from "crypto";
 
@@ -130,7 +130,7 @@ EB에서는 로그인 이후에도
 
 > HTTPS 환경에서 필요한 쿠키 옵션 미설정
 
-```ts
+```typescript
 cookies: {
   sessionToken: {
     name: "__Secure-next-auth.session-token",

@@ -1,0 +1,144 @@
+---
+title: false
+styles: true
+---
+
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:400,700');
+
+// Typography
+$bodytype: (
+        font-family: "'Plus Jakarta Sans', sans-serif",
+        regular: 400,
+        bold: 700,
+        cap-height: 0.75
+)!default;
+
+$headingtype: (
+        font-family: '"Merriweather", serif',
+        regular: 400,
+        bold: 700,
+        cap-height: 0.75
+)!default;
+
+$monospacetype: (
+        font-family: 'Menlo, monospace',
+        regular: 400,
+        cap-height: 0.68
+)!default;
+
+
+
+@import "alembic";
+
+.typeset blockquote {
+  padding: 1rem 1rem 1rem 2rem!important;
+}
+
+ul {
+  padding-left: 1rem!important;
+}
+
+.typeset blockquote p {
+  margin-bottom: 0;
+}
+
+.typeset blockquote ul {
+  padding-left: 2rem!important;
+  border-left: 0.15rem solid #05bf85;
+  font-style: italic;
+}
+
+.typeset small {
+  line-height: 1.5rem;
+}
+
+.typeset .nav a {
+  margin-left: 0.5rem!important;
+  margin-right: 0.5rem!important;
+}
+
+.nav a {
+  padding: 0.5rem!important;
+}
+
+.icon {
+  width: 2em!important;
+  height: 2em!important;
+}
+
+.toc-entry {
+  list-style: none;
+}
+
+.aside {
+  opacity: 1;
+  @media (max-width: 640px) {
+    display: none;
+  }
+}
+
+.typeset table {
+  margin-bottom: 0.6272158824rem!important;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+}
+th,
+td {
+  padding: 6px 15px;
+}
+th {
+  background: #42444e;
+  color: #fff;
+  text-align: left;
+}
+tr:first-child th:first-child {
+  border-top-left-radius: 6px;
+}
+tr:first-child th:last-child {
+  border-top-right-radius: 6px;
+}
+td {
+  border-right: 1px solid #c6c9cc;
+  border-bottom: 1px solid #c6c9cc;
+}
+td:first-child {
+  border-left: 1px solid #c6c9cc;
+}
+tr:nth-child(even) td {
+  background: #eaeaed;
+}
+tr:last-child td:first-child {
+  border-bottom-left-radius: 6px;
+}
+tr:last-child td:last-child {
+  border-bottom-right-radius: 6px;
+}
+
+.typeset p a, .typeset li a {
+  background-image: none!important;
+}
+
+.post-meta a {
+  margin-bottom: 0.875rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  height: 2rem;
+  border-radius: 1rem;
+  display: inline-flex;
+  -webkit-box-align: center;
+  align-items: center;
+  margin-right: 0.875rem;
+  text-decoration: none;
+  border: 1px solid;
+}
+
+.post-meta time {
+  display: inline-flex;
+}
+
+

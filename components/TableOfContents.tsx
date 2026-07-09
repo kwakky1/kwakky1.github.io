@@ -59,18 +59,18 @@ export default function TableOfContents({ content }: { content: string }) {
 
   return (
     <nav className="text-sm">
-      <p className="font-semibold text-gray-500 mb-3 text-xs uppercase tracking-widest">
+      <p className="font-semibold text-gray-500 dark:text-gray-400 mb-3 text-xs uppercase tracking-widest">
         목차
       </p>
-      <ul className="space-y-1.5 border-l-2 border-gray-100 pl-3">
+      <ul className="space-y-1.5 border-l-2 border-gray-100 dark:border-gray-800 pl-3">
         {headings.map((h) => (
           <li key={h.id} style={{ paddingLeft: `${(h.level - 1) * 12}px` }}>
             <a
               href={`#${h.id}`}
-              className={`block leading-snug py-0.5 transition-colors hover:text-teal-600 ${
+              className={`block leading-snug py-0.5 transition-colors hover:text-teal-600 dark:hover:text-teal-400 ${
                 activeId === h.id
-                  ? "text-teal-600 font-semibold border-l-2 border-teal-500 -ml-[14px] pl-3"
-                  : "text-gray-400"
+                  ? "text-teal-600 dark:text-teal-400 font-semibold border-l-2 border-teal-500 -ml-[14px] pl-3"
+                  : "text-gray-400 dark:text-gray-500"
               }`}
             >
               {h.text}

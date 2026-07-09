@@ -9,13 +9,13 @@ function formatDate(dateStr: string): string {
 }
 
 export default function PostCard({ post }: { post: PostMeta }) {
-  const href = `/blog/${post.slug}`;
+  const href = `/blog/${post.slug}/`;
 
   return (
     <Link href={href}>
-      <article className="group rounded-xl overflow-hidden border border-gray-200 hover:shadow-lg transition-all duration-200 cursor-pointer bg-white h-full flex flex-col">
+      <article className="group rounded-xl overflow-hidden border border-gray-200 dark:border-gray-800 hover:shadow-lg transition-all duration-200 cursor-pointer bg-white dark:bg-gray-900 h-full flex flex-col">
         {/* 썸네일 */}
-        <div className="relative h-44 bg-gray-100 shrink-0 overflow-hidden">
+        <div className="relative h-44 bg-gray-100 dark:bg-gray-800 shrink-0 overflow-hidden">
           {post.feature_image ? (
             <Image
               src={post.feature_image}
@@ -31,10 +31,10 @@ export default function PostCard({ post }: { post: PostMeta }) {
 
         {/* 본문 */}
         <div className="p-4 flex flex-col flex-1">
-          <h2 className="font-bold text-gray-900 text-base leading-snug line-clamp-2 mb-2 group-hover:text-teal-600 transition-colors">
+          <h2 className="font-bold text-gray-900 dark:text-gray-100 text-base leading-snug line-clamp-2 mb-2 group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
             {post.title}
           </h2>
-          <p className="text-sm text-gray-500 line-clamp-3 mb-3 flex-1">
+          <p className="text-sm text-gray-500 dark:text-gray-400 line-clamp-3 mb-3 flex-1">
             {post.excerpt}
           </p>
 
@@ -44,7 +44,7 @@ export default function PostCard({ post }: { post: PostMeta }) {
               {post.tags.slice(0, 3).map((tag) => (
                 <span
                   key={tag}
-                  className="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full"
+                  className="text-xs bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 px-2 py-0.5 rounded-full"
                 >
                   {tag}
                 </span>
@@ -52,7 +52,7 @@ export default function PostCard({ post }: { post: PostMeta }) {
             </div>
           )}
 
-          <time className="text-xs text-gray-400">{formatDate(post.date)}</time>
+          <time className="text-xs text-gray-400 dark:text-gray-500">{formatDate(post.date)}</time>
         </div>
       </article>
     </Link>

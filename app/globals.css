@@ -1,9 +1,15 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
+@custom-variant dark (&:where(.dark, .dark *));
 
 :root {
   --background: #f9fafb;
   --foreground: #1f2937;
+}
+
+.dark {
+  --background: #0f172a;
+  --foreground: #e2e8f0;
 }
 
 body {

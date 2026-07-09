@@ -23,6 +23,11 @@
 # misc
 .DS_Store
 *.pem
+.idea/
+
+# leftover Jekyll gem cache (pre-Next.js migration)
+.bundle/
+vendor/
 
 # debug
 npm-debug.log*
@@ -39,3 +44,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# generated at build time by scripts/generate-feeds.mjs (see prebuild script)
+/public/search-index.json
+/public/rss.xml
+/public/sitemap.xml

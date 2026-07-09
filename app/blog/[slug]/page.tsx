@@ -30,8 +30,8 @@ export default async function PostPage({
     <div className="max-w-6xl mx-auto px-4 py-10 flex gap-12">
       {/* 본문 */}
       <article className="flex-1 min-w-0">
-        <header className="mb-8 pb-6 border-b border-gray-200">
-          <h1 className="text-3xl font-bold text-gray-900 mb-4 leading-tight">
+        <header className="mb-8 pb-6 border-b border-gray-200 dark:border-gray-800">
+          <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4 leading-tight">
             {post.title}
           </h1>
 
@@ -40,7 +40,7 @@ export default async function PostPage({
               {post.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="text-sm bg-teal-50 text-teal-700 px-3 py-0.5 rounded-full font-medium"
+                  className="text-sm bg-teal-50 dark:bg-teal-950 text-teal-700 dark:text-teal-300 px-3 py-0.5 rounded-full font-medium"
                 >
                   #{tag}
                 </span>
@@ -48,12 +48,12 @@ export default async function PostPage({
             </div>
           )}
 
-          <time className="text-sm text-gray-400">{post.date}</time>
+          <time className="text-sm text-gray-400 dark:text-gray-500">{post.date}</time>
         </header>
 
         {/* 마크다운 → HTML 렌더링 */}
         <div
-          className="prose prose-gray max-w-none prose-headings:font-bold prose-a:text-teal-600 prose-code:before:content-none prose-code:after:content-none prose-code:bg-gray-100 prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-code:text-sm"
+          className="prose prose-gray dark:prose-invert max-w-none prose-headings:font-bold prose-a:text-teal-600 dark:prose-a:text-teal-400 prose-code:before:content-none prose-code:after:content-none prose-code:bg-gray-100 dark:prose-code:bg-gray-800 prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-code:text-sm"
           dangerouslySetInnerHTML={{ __html: contentHtml }}
         />
       </article>

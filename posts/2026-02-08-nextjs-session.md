@@ -195,4 +195,4 @@ export const getSessionUser = async () => {
 ---
 
 ## 9. 결론
-Next.js + NestJS 환경에서 세션 기반 인증의 가장 효율적인 구조는 **"SSR Protected Layout 중심 인증"**입니다. 이번 구조 전환을 통해 클라이언트 상태 의존성을 제거하고, SSR 환경에 최적화된 보안 모델을 확립할 수 있었습니다.
+Next.js + NestJS 환경에서 세션 기반 인증의 가장 효율적인 구조는 **SSR Protected Layout 중심 인증**입니다. 이번 구조 전환을 통해 클라이언트 상태 의존성을 제거하고, SSR 환경에 최적화된 보안 모델을 확립할 수 있었습니다.

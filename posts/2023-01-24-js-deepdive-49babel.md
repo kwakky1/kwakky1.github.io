@@ -1,7 +1,7 @@
 ---
 title: 자바스크립트 딥다이브, 49장 Babel과 Webpack
-categories:
-- 자바스크립트 딥다이브
+categories: [자바스크립트 딥다이브]
+tags: []
 feature_image: "https://picsum.photos/2560/600?image=886"
 ---
 

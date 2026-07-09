@@ -1,9 +1,7 @@
 ---
 title: Github 프로필 꾸미기, ReadMe
-categories:
-- 깃허브
-- ReadMe
-- 깃허브 프로필
+categories: [깃허브]
+tags: [ReadMe, 프로필]
 feature_image: "https://picsum.photos/2560/600?image=881"
 ---
 

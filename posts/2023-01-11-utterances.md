@@ -1,10 +1,7 @@
 ---
 title: Github 블로그 댓글 추가하기, utterances
-categories:
-- utterances
-- 깃허브블로그
-- 깃허브블로그댓글
-- 깃허브블로그댓글구현
+categories: [깃허브블로그]
+tags: [utterances, 댓글]
 feature_image: "https://picsum.photos/2560/600?image=874"
 ---
 

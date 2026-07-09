@@ -1,8 +1,7 @@
 ---
 title: 리액트 useEffect 사용법 및 메모리 누수
-categories:
-- React
-- useEffect
+categories: [React]
+tags: [useEffect]
 feature_image: "https://picsum.photos/2560/600?image=890"
 ---
 

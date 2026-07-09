@@ -1,6 +1,9 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import { categorySlug } from "@/lib/category-slug";
+
+export { categorySlug };
 
 const postsDir = path.join(process.cwd(), "posts");
 
@@ -80,13 +83,6 @@ export function getAllCategories(): CategoryCount[] {
 
 export function getPostsByCategory(category: string): PostMeta[] {
   return getAllPosts().filter((post) => post.categories.includes(category));
-}
-
-// URL 세그먼트에 "."이 포함되면(예: "Next.js") Next.js의 trailingSlash 정규화가
-// 파일 확장자로 오인해 트레일링 슬래시를 제거해버려 정적 export에서 404가 난다.
-// "."을 "-"로 치환한 슬러그를 라우트 파라미터로 쓰고, 필터링 시 원래 카테고리명으로 역매핑한다.
-export function categorySlug(category: string): string {
-  return encodeURIComponent(category.replace(/\./g, "-"));
 }
 
 export function findCategoryBySlug(slug: string): string | undefined {

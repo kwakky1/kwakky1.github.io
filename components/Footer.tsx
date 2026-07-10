@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <footer className="border-t border-gray-200 dark:border-gray-800 mt-20">
@@ -18,6 +20,12 @@ export default function Footer() {
           >
             Email
           </a>
+          <Link
+            href="/privacy"
+            className="hover:text-teal-600 dark:hover:text-teal-400 transition-colors"
+          >
+            Privacy Policy
+          </Link>
         </div>
       </div>
     </footer>

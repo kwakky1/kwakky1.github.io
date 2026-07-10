@@ -7,7 +7,8 @@
     "prebuild": "npm run generate-feeds",
     "build": "next build",
     "start": "next start",
-    "generate-feeds": "node scripts/generate-feeds.mjs"
+    "generate-feeds": "node scripts/generate-feeds.mjs",
+    "upload-images": "node --env-file=.env.local scripts/upload-images.mjs"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.19",

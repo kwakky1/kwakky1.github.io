@@ -58,7 +58,7 @@ video.load();
 
 ```tsx
 const [isScriptReady, setIsScriptReady] = useState(
-  () => typeof window !== "undefined" && !!window.kakao?.maps
+  () => typeof window !== "undefined" && !!window.kakao?.maps,
 );
 
 useEffect(() => {
@@ -70,7 +70,11 @@ useEffect(() => {
 
 return (
   <>
-    <Script strategy="afterInteractive" src={SDK_URL} onReady={() => setIsScriptReady(true)} />
+    <Script
+      strategy="afterInteractive"
+      src={SDK_URL}
+      onReady={() => setIsScriptReady(true)}
+    />
     <div ref={mapRef} />
   </>
 );
@@ -93,9 +97,9 @@ const customFont = localFont({
   preload: false, // above-the-fold 리소스와의 대역폭 경합 방지
   src: [
     { path: "...-Bold.woff2", weight: "700", style: "normal" },
-    { path: "...-Regular.woff2", weight: "400", style: "normal" }
+    { path: "...-Regular.woff2", weight: "400", style: "normal" },
     // Thin, ExtraLight 등 실사용 없는 굵기는 제거
-  ]
+  ],
 });
 ```
 
@@ -104,7 +108,9 @@ const customFont = localFont({
 상품 목록 페이지의 프로모션 슬라이더가 페이지 컴포넌트에 직접 import되어 있어, 슬라이더 라이브러리가 초기 번들에 그대로 포함되고 있었습니다. 슬라이더 자체를 별도 컴포넌트로 추출하고 `next/dynamic`으로 분리했습니다.
 
 ```tsx
-const CategoryPromoSwiper = dynamic(() => import("@/components/CategoryPromoSwiper"));
+const CategoryPromoSwiper = dynamic(
+  () => import("@/components/CategoryPromoSwiper"),
+);
 ```
 
 <!-- TODO(image): Bundle Analyzer(next-bundle-analyzer) treemap 전/후 비교 스크린샷. 슬라이더 라이브러리(swiper)가 초기 번들에서 빠진 게 보이면 됨. -->

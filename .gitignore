@@ -37,6 +37,10 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.example
+
+# 포스트용 스크린샷 스테이징 폴더 (scripts/upload-images.mjs로 CDN 업로드 후 URL만 마크다운에 사용)
+/image-drafts/
 
 # vercel
 .vercel

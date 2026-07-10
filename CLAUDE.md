@@ -61,6 +61,16 @@ Commits there use a `[BZ-XXXX] <summary>` / `fix(BZ-XXXX): <summary>` ticket-pre
 
 **Before publishing**, strip anything proprietary: internal ticket IDs (`BZ-XXXX`), Breezm-specific business logic/domain details, internal URLs, and anything else that isn't reusable general technical knowledge. Keep the technical problem and solution; drop the company-specific wrapper.
 
+## Adding images to posts
+
+Screenshots/evidence (Network waterfalls, Lighthouse scores, before/after UI) that a post needs are marked inline as `<!-- TODO(image): ... -->` HTML comments — invisible on the rendered page, visible in the markdown source. Fill them in via:
+
+1. Drop the captured images into `image-drafts/<post-slug>/`, named by the order they should fill the TODOs in the post — `1.png`, `2.png`, `3-network-tab.png`, ... (leading number is what's sorted on; the rest of the filename is free text). This folder is separate from `posts/` and is gitignored — raw screenshots never get committed or bloat the repo.
+2. `npm run upload-images -- <post-slug>` — reads `posts/<post-slug>.md`, collects its `TODO(image)` comments in document order, uploads `image-drafts/<post-slug>/`'s images to Cloudinary in filename-number order (signed upload, no SDK dependency, see `scripts/upload-images.mjs`), and pairs them up 1st-image→1st-TODO, 2nd→2nd, etc. — **overwriting `posts/<post-slug>.md` in place**, replacing each matched TODO comment with `![<todo description>](url)`.
+3. If TODO count and image count don't match, it fills as many pairs as it can (in order) and warns about the leftover TODOs/images rather than failing.
+
+Requires `CLOUDINARY_CLOUD_NAME` / `CLOUDINARY_API_KEY` / `CLOUDINARY_API_SECRET` in `.env.local` (gitignored; see `.env.example` for the template). Get these from the Cloudinary dashboard — no CLI tool (PicGo etc.) needed, this repo's script covers it end to end.
+
 ## Deployment
 
 `.github/workflows/deploy.yml` builds (`npm ci && npm run build`) and deploys `out/` via `actions/upload-pages-artifact` + `actions/deploy-pages` on every push to `master`.

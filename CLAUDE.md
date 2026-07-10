@@ -49,6 +49,18 @@ feature_image: "https://picsum.photos/2560/600?image=895"  # optional
 2. `npm run dev` (regenerates feeds automatically) and check `http://localhost:3000/blog/YYYY-MM-DD-slug/`.
 3. Commit with `docs(blog): <post summary>` (see Commit Convention below). No need to touch categories/search/RSS by hand — all derived at build time from `posts/`.
 
+## Content sourcing (work-derived posts)
+
+The most valuable posts (see the `2026-02-*` posts) come from real work at Breezm, not invented topics. Source material lives in **sibling repos**, not in this repo:
+
+- `~/WebstormProjects/website` — Breezm KR customer-facing frontend
+- `~/WebstormProjects/website-us` — Breezm US customer-facing frontend
+- `~/WebstormProjects/bms_fe` / `~/WebstormProjects/bms_be` — internal business management system, frontend/backend
+
+Commits there use a `[BZ-XXXX] <summary>` / `fix(BZ-XXXX): <summary>` ticket-prefixed convention. To find blog-worthy topics: `git log --oneline -30` in each repo and look for anything with a clear problem → investigation → fix shape (perf/Core Web Vitals fixes, tricky bugs, migrations, architecture changes) rather than routine content/copy edits.
+
+**Before publishing**, strip anything proprietary: internal ticket IDs (`BZ-XXXX`), Breezm-specific business logic/domain details, internal URLs, and anything else that isn't reusable general technical knowledge. Keep the technical problem and solution; drop the company-specific wrapper.
+
 ## Deployment
 
 `.github/workflows/deploy.yml` builds (`npm ci && npm run build`) and deploys `out/` via `actions/upload-pages-artifact` + `actions/deploy-pages` on every push to `master`.

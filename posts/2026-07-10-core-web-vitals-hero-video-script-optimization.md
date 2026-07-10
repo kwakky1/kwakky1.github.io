@@ -8,11 +8,16 @@ feature_image: "https://picsum.photos/2560/600?image=902"
 
 메인 배너에 자동재생 영상을 쓰는 랜딩 페이지의 Core Web Vitals를 개선한 기록입니다. 영상 하나만 손보면 끝날 줄 알았는데, 실제로는 "화면에 안 보이는 리소스가 왜 로드되고 있는가"를 하나씩 걷어내는 작업에 가까웠습니다.
 
+<!-- TODO(image): PageSpeed Insights 또는 Lighthouse 리포트의 전/후 점수 비교 스크린샷 (LCP·CLS·성능 점수). 이 글 전체를 요약하는 헤드라인 증거라 도입부에 넣으면 가장 효과적. -->
+
 ## 1. Hero 영상: 숨겨진 반응형 분기의 이중 fetch
 
 PC/모바일 배너를 각각 다른 `<video>`로 렌더링하고 `display: none`으로 한쪽만 숨기는 반응형 패턴을 쓰고 있었습니다.
 
 - **문제**: 두 `<video>` 모두 DOM에 마운트된 상태라 `autoPlay` 속성이 둘 다 동작해, 화면에 보이지도 않는 쪽의 영상까지 함께 다운로드·재생되고 있었습니다. 모바일에서 PC용 영상까지 몰래 받는 셈이라 대역폭과 LCP 모두 손해.
+
+<!-- TODO(image): 수정 전 상태를 재현해 크롬 DevTools Network 탭 스크린샷. PC/MO 두 video 리소스가 동시에 로드되는 워터폴이 보이면 됨 (Filter: Media). -->
+
 - **해결**: `autoPlay` 속성을 떼고, `offsetParent`로 실제 화면에 렌더링 중인 요소인지 확인한 뒤에만 `load()`를 호출하도록 게이팅했습니다. 그리고 poster 이미지를 문서 흐름 안에 그대로 두어 LCP 요소를 "영상"이 아닌 "poster 이미지 로딩 속도"로 고정시키고, video는 `canplay` 이벤트 이후 `opacity`로만 위에 겹쳐 노출했습니다.
 
 ```tsx
@@ -39,11 +44,16 @@ video.load();
 </Box>
 ```
 
+<!-- TODO(image): 수정 후 Network 탭 스크린샷 (video 요청 1개만 남은 워터폴). 위 "수정 전" 스크린샷과 나란히 비교되도록 같은 구도로 찍으면 좋음. -->
+
 ## 2. 서드파티 스크립트: 전역 로드에서 컴포넌트 단위 로드로
 
 지도 SDK를 `_app.tsx`에서 `beforeInteractive`로 전역 로드하고 있었습니다.
 
 - **문제**: 지도가 안 보이는 페이지에서도 렌더링을 막아가며 무거운 SDK를 미리 받고 있었습니다. 첫 페인트를 늦추는 리소스가 정작 필요 없는 페이지에도 실려 있는 상황.
+
+<!-- TODO(image): 지도가 없는 페이지(예: 홈)에서 크롬 DevTools Network 탭에 카카오맵 SDK가 beforeInteractive로 로드되던 수정 전 모습. Performance 탭의 메인 스레드 타임라인으로 렌더 블로킹을 보여줘도 좋음. -->
+
 - **해결**: 스크립트를 지도를 실제로 쓰는 컴포넌트 내부로 옮기고 `afterInteractive` + `onReady` 콜백으로 전환했습니다. 이때 스크립트 로드 완료 여부를 `state`로 추적해야 하는 이유가 있는데, 클라이언트 사이드 라우팅으로 해당 컴포넌트가 뒤늦게 마운트되는 경우 `useEffect`의 지도 초기화 로직이 스크립트 로드 완료보다 먼저 실행돼버리는 레이스 컨디션이 있었기 때문입니다.
 
 ```tsx
@@ -73,6 +83,9 @@ return (
 `next/font/local`로 커스텀 폰트를 등록할 때 7개 굵기(weight)를 전부 나열해뒀는데, 기본 설정상 모두 `<link rel="preload">`로 강제 fetch되고 있었습니다.
 
 - **문제**: 실제 화면에서 쓰지 않는 Thin·ExtraLight 굵기까지 preload 대상에 포함되어, Hero 영상·이미지 같은 진짜 above-the-fold 리소스와 초기 대역폭을 다투고 있었습니다.
+
+<!-- TODO(image): 수정 전 Network 탭에서 폰트 7개 굵기가 전부 preload로 잡혀있는 워터폴 스크린샷 (Filter: Font). -->
+
 - **해결**: 안 쓰는 굵기 정의를 제거하고, `preload: false`로 바꿔 폰트를 일반 CSS 리소스 로딩 경로로 내렸습니다.
 
 ```tsx
@@ -93,6 +106,8 @@ const customFont = localFont({
 ```tsx
 const CategoryPromoSwiper = dynamic(() => import("@/components/CategoryPromoSwiper"));
 ```
+
+<!-- TODO(image): Bundle Analyzer(next-bundle-analyzer) treemap 전/후 비교 스크린샷. 슬라이더 라이브러리(swiper)가 초기 번들에서 빠진 게 보이면 됨. -->
 
 ## 정리
 

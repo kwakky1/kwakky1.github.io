@@ -8,11 +8,15 @@ feature_image: "https://picsum.photos/2560/600?image=902"
 
 메인 배너에 자동재생 영상을 쓰는 랜딩 페이지의 Core Web Vitals를 개선한 기록입니다. 영상 하나만 손보면 끝날 줄 알았는데, 실제로는 "화면에 안 보이는 리소스가 왜 로드되고 있는가"를 하나씩 걷어내는 작업에 가까웠습니다.
 
-![Lighthouse 점수 비교 - 개선 전](https://res.cloudinary.com/bx1ml39u/image/upload/v1783682172/kwakky1-blog/2026-07-10-core-web-vitals-hero-video-script-optimization/xk1ic45sfmfzzv42aa6n.png)
-*개선 전*
+<figure>
+  <img src="https://res.cloudinary.com/bx1ml39u/image/upload/v1783682173/kwakky1-blog/2026-07-10-core-web-vitals-hero-video-script-optimization/dziqxrrvtxp8knjnrsie.png" alt="Lighthouse 점수 - 개선 전" />
+  <figcaption>개선 전</figcaption>
+</figure>
 
-![Lighthouse 점수 비교 - 개선 후](https://res.cloudinary.com/bx1ml39u/image/upload/v1783682173/kwakky1-blog/2026-07-10-core-web-vitals-hero-video-script-optimization/dziqxrrvtxp8knjnrsie.png)
-*개선 후*
+<figure>
+  <img src="https://res.cloudinary.com/bx1ml39u/image/upload/v1783682172/kwakky1-blog/2026-07-10-core-web-vitals-hero-video-script-optimization/xk1ic45sfmfzzv42aa6n.png" alt="Lighthouse 점수 - 개선 후" />
+  <figcaption>개선 후</figcaption>
+</figure>
 
 ## 1. Hero 영상: 숨겨진 반응형 분기의 이중 fetch
 
@@ -117,11 +121,15 @@ const CategoryPromoSwiper = dynamic(
 );
 ```
 
-![Network 탭 - 슬라이더 청크가 초기 로드에서 빠진 모습, 개선 전](https://res.cloudinary.com/bx1ml39u/image/upload/v1783682177/kwakky1-blog/2026-07-10-core-web-vitals-hero-video-script-optimization/ymk6ykbuneabymlhvvl6.png)
-*개선 전*
+<figure>
+  <img src="https://res.cloudinary.com/bx1ml39u/image/upload/v1783682177/kwakky1-blog/2026-07-10-core-web-vitals-hero-video-script-optimization/ymk6ykbuneabymlhvvl6.png" alt="Network 탭 - 슬라이더 청크가 초기 로드에서 빠진 모습, 개선 전" />
+  <figcaption>개선 전</figcaption>
+</figure>
 
-![Network 탭 - 슬라이더 청크가 초기 로드에서 빠진 모습, 개선 후](https://res.cloudinary.com/bx1ml39u/image/upload/v1783682178/kwakky1-blog/2026-07-10-core-web-vitals-hero-video-script-optimization/aamnl6jjfiyi9ding8oo.png)
-*개선 후*
+<figure>
+  <img src="https://res.cloudinary.com/bx1ml39u/image/upload/v1783682178/kwakky1-blog/2026-07-10-core-web-vitals-hero-video-script-optimization/aamnl6jjfiyi9ding8oo.png" alt="Network 탭 - 슬라이더 청크가 초기 로드에서 빠진 모습, 개선 후" />
+  <figcaption>개선 후</figcaption>
+</figure>
 
 ## 정리
 

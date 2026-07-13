@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState, useMemo } from "react";
+import GithubSlugger from "github-slugger";
 
 interface Heading {
   id: string;
@@ -11,21 +12,20 @@ interface Heading {
 function extractHeadings(markdown: string): Heading[] {
   const lines = markdown.split("\n");
   const result: Heading[] = [];
+  const slugger = new GithubSlugger(); // rehype-slug와 동일한 라이브러리로 id 생성 (id 불일치 방지)
+  let inCodeFence = false;
 
   for (const line of lines) {
-    // 코드 블록 내부는 건너뜀
-    if (line.startsWith("```")) continue;
+    if (line.startsWith("```")) {
+      inCodeFence = !inCodeFence;
+      continue;
+    }
+    if (inCodeFence) continue;
     const match = line.match(/^(#{1,3})\s+(.+)/);
     if (match) {
       const level = match[1].length;
-      const text = match[2].trim();
-      // rehype-slug와 동일한 id 생성 규칙
-      const id = text
-        .toLowerCase()
-        .replace(/[`*_[\]()]/g, "")
-        .replace(/\s+/g, "-")
-        .replace(/-+/g, "-")
-        .replace(/^-|-$/g, "");
+      const text = match[2].trim().replace(/[`*_]/g, "");
+      const id = slugger.slug(text);
       result.push({ id, text, level });
     }
   }
